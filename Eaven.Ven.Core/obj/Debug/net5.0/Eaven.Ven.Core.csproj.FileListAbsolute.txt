@@ -1,0 +1,12 @@
+E:\项目\Eaven\Eaven\Eaven.Ven.Core\bin\Debug\net5.0\Eaven.Ven.Core.deps.json
+E:\项目\Eaven\Eaven\Eaven.Ven.Core\bin\Debug\net5.0\Eaven.Ven.Core.dll
+E:\项目\Eaven\Eaven\Eaven.Ven.Core\bin\Debug\net5.0\ref\Eaven.Ven.Core.dll
+E:\项目\Eaven\Eaven\Eaven.Ven.Core\bin\Debug\net5.0\Eaven.Ven.Core.pdb
+E:\项目\Eaven\Eaven\Eaven.Ven.Core\obj\Debug\net5.0\Eaven.Ven.Core.GeneratedMSBuildEditorConfig.editorconfig
+E:\项目\Eaven\Eaven\Eaven.Ven.Core\obj\Debug\net5.0\Eaven.Ven.Core.AssemblyInfoInputs.cache
+E:\项目\Eaven\Eaven\Eaven.Ven.Core\obj\Debug\net5.0\Eaven.Ven.Core.AssemblyInfo.cs
+E:\项目\Eaven\Eaven\Eaven.Ven.Core\obj\Debug\net5.0\Eaven.Ven.Core.csproj.CoreCompileInputs.cache
+E:\项目\Eaven\Eaven\Eaven.Ven.Core\obj\Debug\net5.0\Eaven.Ven.Core.dll
+E:\项目\Eaven\Eaven\Eaven.Ven.Core\obj\Debug\net5.0\ref\Eaven.Ven.Core.dll
+E:\项目\Eaven\Eaven\Eaven.Ven.Core\obj\Debug\net5.0\Eaven.Ven.Core.pdb
+E:\项目\Eaven\Eaven\Eaven.Ven.Core\obj\Debug\net5.0\Eaven.Ven.Core.csprojAssemblyReference.cache
