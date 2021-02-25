@@ -1,0 +1,9 @@
+E:\项目\Eaven\Eaven\Eaven.Ven.EntityFrameworkCore.SqlServer\bin\Debug\netcoreapp3.1\Eaven.Ven.EntityFrameworkCore.SqlServer.deps.json
+E:\项目\Eaven\Eaven\Eaven.Ven.EntityFrameworkCore.SqlServer\bin\Debug\netcoreapp3.1\Eaven.Ven.EntityFrameworkCore.SqlServer.dll
+E:\项目\Eaven\Eaven\Eaven.Ven.EntityFrameworkCore.SqlServer\bin\Debug\netcoreapp3.1\Eaven.Ven.EntityFrameworkCore.SqlServer.pdb
+E:\项目\Eaven\Eaven\Eaven.Ven.EntityFrameworkCore.SqlServer\obj\Debug\netcoreapp3.1\Eaven.Ven.EntityFrameworkCore.SqlServer.csprojAssemblyReference.cache
+E:\项目\Eaven\Eaven\Eaven.Ven.EntityFrameworkCore.SqlServer\obj\Debug\netcoreapp3.1\Eaven.Ven.EntityFrameworkCore.SqlServer.AssemblyInfoInputs.cache
+E:\项目\Eaven\Eaven\Eaven.Ven.EntityFrameworkCore.SqlServer\obj\Debug\netcoreapp3.1\Eaven.Ven.EntityFrameworkCore.SqlServer.AssemblyInfo.cs
+E:\项目\Eaven\Eaven\Eaven.Ven.EntityFrameworkCore.SqlServer\obj\Debug\netcoreapp3.1\Eaven.Ven.EntityFrameworkCore.SqlServer.csproj.CoreCompileInputs.cache
+E:\项目\Eaven\Eaven\Eaven.Ven.EntityFrameworkCore.SqlServer\obj\Debug\netcoreapp3.1\Eaven.Ven.EntityFrameworkCore.SqlServer.dll
+E:\项目\Eaven\Eaven\Eaven.Ven.EntityFrameworkCore.SqlServer\obj\Debug\netcoreapp3.1\Eaven.Ven.EntityFrameworkCore.SqlServer.pdb

@@ -1,0 +1,9 @@
+E:\项目\Eaven\Eaven\Eaven.Ven.EntityFrameworkCore\bin\Debug\netcoreapp3.1\Eaven.Ven.EntityFrameworkCore.deps.json
+E:\项目\Eaven\Eaven\Eaven.Ven.EntityFrameworkCore\bin\Debug\netcoreapp3.1\Eaven.Ven.EntityFrameworkCore.dll
+E:\项目\Eaven\Eaven\Eaven.Ven.EntityFrameworkCore\bin\Debug\netcoreapp3.1\Eaven.Ven.EntityFrameworkCore.pdb
+E:\项目\Eaven\Eaven\Eaven.Ven.EntityFrameworkCore\obj\Debug\netcoreapp3.1\Eaven.Ven.EntityFrameworkCore.csprojAssemblyReference.cache
+E:\项目\Eaven\Eaven\Eaven.Ven.EntityFrameworkCore\obj\Debug\netcoreapp3.1\Eaven.Ven.EntityFrameworkCore.AssemblyInfoInputs.cache
+E:\项目\Eaven\Eaven\Eaven.Ven.EntityFrameworkCore\obj\Debug\netcoreapp3.1\Eaven.Ven.EntityFrameworkCore.AssemblyInfo.cs
+E:\项目\Eaven\Eaven\Eaven.Ven.EntityFrameworkCore\obj\Debug\netcoreapp3.1\Eaven.Ven.EntityFrameworkCore.csproj.CoreCompileInputs.cache
+E:\项目\Eaven\Eaven\Eaven.Ven.EntityFrameworkCore\obj\Debug\netcoreapp3.1\Eaven.Ven.EntityFrameworkCore.dll
+E:\项目\Eaven\Eaven\Eaven.Ven.EntityFrameworkCore\obj\Debug\netcoreapp3.1\Eaven.Ven.EntityFrameworkCore.pdb

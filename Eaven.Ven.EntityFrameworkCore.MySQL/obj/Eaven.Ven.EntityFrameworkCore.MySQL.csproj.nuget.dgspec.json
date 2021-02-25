@@ -1,0 +1,150 @@
+{
+  "format": 1,
+  "restore": {
+    "E:\\项目\\Eaven\\Eaven\\Eaven.Ven.EntityFrameworkCore.MySQL\\Eaven.Ven.EntityFrameworkCore.MySQL.csproj": {}
+  },
+  "projects": {
+    "E:\\项目\\Eaven\\Eaven\\Eaven.Ven.EntityFrameworkCore.MySQL\\Eaven.Ven.EntityFrameworkCore.MySQL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\项目\\Eaven\\Eaven\\Eaven.Ven.EntityFrameworkCore.MySQL\\Eaven.Ven.EntityFrameworkCore.MySQL.csproj",
+        "projectName": "Eaven.Ven.EntityFrameworkCore.MySQL",
+        "projectPath": "E:\\项目\\Eaven\\Eaven\\Eaven.Ven.EntityFrameworkCore.MySQL\\Eaven.Ven.EntityFrameworkCore.MySQL.csproj",
+        "packagesPath": "C:\\Users\\ljy\\.nuget\\packages\\",
+        "outputPath": "E:\\项目\\Eaven\\Eaven\\Eaven.Ven.EntityFrameworkCore.MySQL\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ljy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://192.168.99.66:8084/nuget": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "E:\\项目\\Eaven\\Eaven\\Eaven.Ven.EntityFrameworkCore\\Eaven.Ven.EntityFrameworkCore.csproj": {
+                "projectPath": "E:\\项目\\Eaven\\Eaven\\Eaven.Ven.EntityFrameworkCore\\Eaven.Ven.EntityFrameworkCore.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Autofac": {
+              "target": "Package",
+              "version": "[6.1.0, )"
+            },
+            "LinqKit.Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.23, )"
+            },
+            "MySql.Data.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.22, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\项目\\Eaven\\Eaven\\Eaven.Ven.EntityFrameworkCore\\Eaven.Ven.EntityFrameworkCore.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\项目\\Eaven\\Eaven\\Eaven.Ven.EntityFrameworkCore\\Eaven.Ven.EntityFrameworkCore.csproj",
+        "projectName": "Eaven.Ven.EntityFrameworkCore",
+        "projectPath": "E:\\项目\\Eaven\\Eaven\\Eaven.Ven.EntityFrameworkCore\\Eaven.Ven.EntityFrameworkCore.csproj",
+        "packagesPath": "C:\\Users\\ljy\\.nuget\\packages\\",
+        "outputPath": "E:\\项目\\Eaven\\Eaven\\Eaven.Ven.EntityFrameworkCore\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ljy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://192.168.99.66:8084/nuget": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.Proxies": {
+              "target": "Package",
+              "version": "[5.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[5.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

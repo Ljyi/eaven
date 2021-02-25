@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "kEjQOFGVj6txkzgAynY9Q1iLnr7oL/FjHjCEMPvKMdp2u2CYG++LWczNoS27nA3x4IQlXbRiuZBwQWhP/8Nv3g==",
+  "success": true,
+  "projectFilePath": "E:\\项目\\Eaven\\Eaven\\Eaven.Ven.Core\\Eaven.Ven.Core.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ljy\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\5.0.0\\microsoft.extensions.configuration.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\ljy\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\ljy\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
