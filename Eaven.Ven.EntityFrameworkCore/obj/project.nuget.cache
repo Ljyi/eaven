@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "GQaPutH4VGBLYlw7LcUuIBRm7X7fCXm6CHZbP1DKr92s3XR+kmZTNVcVjE2x4548F2IRVPO+dZUkJGkwukUjTQ==",
+  "dgSpecHash": "jOdeoX5D4/60qfVtH/PQxpqqGiwCVFAzMTA6Lh24CDPqt1v35PaalcrAw7vZ1NgJB015mFoaNVSIb/MEvdCzrA==",
   "success": true,
   "projectFilePath": "E:\\项目\\Eaven\\Eaven\\Eaven.Ven.EntityFrameworkCore\\Eaven.Ven.EntityFrameworkCore.csproj",
   "expectedPackageFiles": [
@@ -66,6 +66,7 @@
     "C:\\Users\\ljy\\.nuget\\packages\\system.io.filesystem\\4.3.0\\system.io.filesystem.4.3.0.nupkg.sha512",
     "C:\\Users\\ljy\\.nuget\\packages\\system.io.filesystem.primitives\\4.3.0\\system.io.filesystem.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\ljy\\.nuget\\packages\\system.linq\\4.3.0\\system.linq.4.3.0.nupkg.sha512",
+    "C:\\Users\\ljy\\.nuget\\packages\\system.linq.dynamic.core\\1.2.8\\system.linq.dynamic.core.1.2.8.nupkg.sha512",
     "C:\\Users\\ljy\\.nuget\\packages\\system.linq.expressions\\4.3.0\\system.linq.expressions.4.3.0.nupkg.sha512",
     "C:\\Users\\ljy\\.nuget\\packages\\system.net.http\\4.3.0\\system.net.http.4.3.0.nupkg.sha512",
     "C:\\Users\\ljy\\.nuget\\packages\\system.net.primitives\\4.3.0\\system.net.primitives.4.3.0.nupkg.sha512",

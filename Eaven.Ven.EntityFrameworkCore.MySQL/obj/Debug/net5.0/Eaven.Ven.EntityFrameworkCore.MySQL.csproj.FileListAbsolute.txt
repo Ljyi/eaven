@@ -13,3 +13,5 @@ E:\项目\Eaven\Eaven\Eaven.Ven.EntityFrameworkCore.MySQL\obj\Debug\net5.0\Eaven
 E:\项目\Eaven\Eaven\Eaven.Ven.EntityFrameworkCore.MySQL\obj\Debug\net5.0\Eaven.Ven.EntityFrameworkCore.MySQL.dll
 E:\项目\Eaven\Eaven\Eaven.Ven.EntityFrameworkCore.MySQL\obj\Debug\net5.0\ref\Eaven.Ven.EntityFrameworkCore.MySQL.dll
 E:\项目\Eaven\Eaven\Eaven.Ven.EntityFrameworkCore.MySQL\obj\Debug\net5.0\Eaven.Ven.EntityFrameworkCore.MySQL.pdb
+E:\项目\Eaven\Eaven\Eaven.Ven.EntityFrameworkCore.MySQL\bin\Debug\net5.0\Eaven.Ven.Core.dll
+E:\项目\Eaven\Eaven\Eaven.Ven.EntityFrameworkCore.MySQL\bin\Debug\net5.0\Eaven.Ven.Core.pdb

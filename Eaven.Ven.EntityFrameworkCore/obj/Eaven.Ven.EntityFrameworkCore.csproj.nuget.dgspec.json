@@ -4,14 +4,14 @@
     "E:\\项目\\Eaven\\Eaven\\Eaven.Ven.EntityFrameworkCore\\Eaven.Ven.EntityFrameworkCore.csproj": {}
   },
   "projects": {
-    "E:\\项目\\Eaven\\Eaven\\Eaven.Ven.EntityFrameworkCore\\Eaven.Ven.EntityFrameworkCore.csproj": {
+    "E:\\项目\\Eaven\\Eaven\\Eaven.Ven.Core\\Eaven.Ven.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\项目\\Eaven\\Eaven\\Eaven.Ven.EntityFrameworkCore\\Eaven.Ven.EntityFrameworkCore.csproj",
-        "projectName": "Eaven.Ven.EntityFrameworkCore",
-        "projectPath": "E:\\项目\\Eaven\\Eaven\\Eaven.Ven.EntityFrameworkCore\\Eaven.Ven.EntityFrameworkCore.csproj",
+        "projectUniqueName": "E:\\项目\\Eaven\\Eaven\\Eaven.Ven.Core\\Eaven.Ven.Core.csproj",
+        "projectName": "Eaven.Ven.Core",
+        "projectPath": "E:\\项目\\Eaven\\Eaven\\Eaven.Ven.Core\\Eaven.Ven.Core.csproj",
         "packagesPath": "C:\\Users\\ljy\\.nuget\\packages\\",
-        "outputPath": "E:\\项目\\Eaven\\Eaven\\Eaven.Ven.EntityFrameworkCore\\obj\\",
+        "outputPath": "E:\\项目\\Eaven\\Eaven\\Eaven.Ven.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ljy\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -41,6 +41,75 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\项目\\Eaven\\Eaven\\Eaven.Ven.EntityFrameworkCore\\Eaven.Ven.EntityFrameworkCore.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\项目\\Eaven\\Eaven\\Eaven.Ven.EntityFrameworkCore\\Eaven.Ven.EntityFrameworkCore.csproj",
+        "projectName": "Eaven.Ven.EntityFrameworkCore",
+        "projectPath": "E:\\项目\\Eaven\\Eaven\\Eaven.Ven.EntityFrameworkCore\\Eaven.Ven.EntityFrameworkCore.csproj",
+        "packagesPath": "C:\\Users\\ljy\\.nuget\\packages\\",
+        "outputPath": "E:\\项目\\Eaven\\Eaven\\Eaven.Ven.EntityFrameworkCore\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ljy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://192.168.99.66:8084/nuget": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "E:\\项目\\Eaven\\Eaven\\Eaven.Ven.Core\\Eaven.Ven.Core.csproj": {
+                "projectPath": "E:\\项目\\Eaven\\Eaven\\Eaven.Ven.Core\\Eaven.Ven.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[5.0.3, )"
@@ -52,6 +121,10 @@
             "Microsoft.EntityFrameworkCore.Relational": {
               "target": "Package",
               "version": "[5.0.3, )"
+            },
+            "System.Linq.Dynamic.Core": {
+              "target": "Package",
+              "version": "[1.2.8, )"
             }
           },
           "imports": [

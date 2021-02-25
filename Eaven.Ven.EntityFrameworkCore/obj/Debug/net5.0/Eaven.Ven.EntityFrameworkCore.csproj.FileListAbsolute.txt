@@ -10,3 +10,6 @@ E:\项目\Eaven\Eaven\Eaven.Ven.EntityFrameworkCore\obj\Debug\net5.0\Eaven.Ven.E
 E:\项目\Eaven\Eaven\Eaven.Ven.EntityFrameworkCore\obj\Debug\net5.0\Eaven.Ven.EntityFrameworkCore.dll
 E:\项目\Eaven\Eaven\Eaven.Ven.EntityFrameworkCore\obj\Debug\net5.0\ref\Eaven.Ven.EntityFrameworkCore.dll
 E:\项目\Eaven\Eaven\Eaven.Ven.EntityFrameworkCore\obj\Debug\net5.0\Eaven.Ven.EntityFrameworkCore.pdb
+E:\项目\Eaven\Eaven\Eaven.Ven.EntityFrameworkCore\bin\Debug\net5.0\Eaven.Ven.Core.dll
+E:\项目\Eaven\Eaven\Eaven.Ven.EntityFrameworkCore\bin\Debug\net5.0\Eaven.Ven.Core.pdb
+E:\项目\Eaven\Eaven\Eaven.Ven.EntityFrameworkCore\obj\Debug\net5.0\Eaven.Ven.EntityFrameworkCore.csproj.CopyComplete

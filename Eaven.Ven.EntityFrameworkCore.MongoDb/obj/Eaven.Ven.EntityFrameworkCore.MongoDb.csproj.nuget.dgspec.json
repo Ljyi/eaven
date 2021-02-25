@@ -161,7 +161,11 @@
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "E:\\项目\\Eaven\\Eaven\\Eaven.Ven.Core\\Eaven.Ven.Core.csproj": {
+                "projectPath": "E:\\项目\\Eaven\\Eaven\\Eaven.Ven.Core\\Eaven.Ven.Core.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -185,6 +189,10 @@
             "Microsoft.EntityFrameworkCore.Relational": {
               "target": "Package",
               "version": "[5.0.3, )"
+            },
+            "System.Linq.Dynamic.Core": {
+              "target": "Package",
+              "version": "[1.2.8, )"
             }
           },
           "imports": [
