@@ -14,10 +14,6 @@ namespace Eaven.Ven.EntityFrameworkCore.MySQL
         {
             _configuration = configuration;
         }
-        //public DbContext CreateDbContext(WriteAndRead dbType)
-        //{
-        //    throw new NotImplementedException();
-        //}
         /// <summary>
         /// 获取DbContext的Options
         /// </summary>
