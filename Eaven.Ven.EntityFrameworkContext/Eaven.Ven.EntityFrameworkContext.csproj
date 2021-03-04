@@ -4,4 +4,9 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Eaven.Ven.EntityFrameworkCore.MySQL\Eaven.Ven.EntityFrameworkCore.MySQL.csproj" />
+    <ProjectReference Include="..\Eaven.Ven.EntityFrameworkCore\Eaven.Ven.EntityFrameworkCore.csproj" />
+  </ItemGroup>
+
 </Project>

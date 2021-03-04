@@ -1,5 +1,3 @@
-using Autofac;
-using Eaven.Ven.EntityFrameworkCore.MySQL;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -14,7 +12,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Eaven.Ven.WebApi
+namespace Eaven.Ven.Gateway
 {
     public class Startup
     {
@@ -32,7 +30,7 @@ namespace Eaven.Ven.WebApi
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Eaven.Ven.WebApi", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Eaven.Ven.Gateway", Version = "v1" });
             });
         }
 
@@ -43,7 +41,7 @@ namespace Eaven.Ven.WebApi
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Eaven.Ven.WebApi v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Eaven.Ven.Gateway v1"));
             }
 
             app.UseHttpsRedirection();
@@ -56,12 +54,6 @@ namespace Eaven.Ven.WebApi
             {
                 endpoints.MapControllers();
             });
-        }
-        //×¢²áÒÀÀµÄ£¿é
-        public void ConfigureContainer(ContainerBuilder builder)
-        {
-            //×¢²áÒÀÀµÄ£¿é
-            builder.RegisterModule<MySqlEfCoreModule>();
         }
     }
 }

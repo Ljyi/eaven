@@ -61,3 +61,5 @@
 /Eaven.Ven.RabbitMQ/bin/Debug/net5.0
 /Eaven.Ven.Redis/bin/Debug/net5.0
 /Eaven.Ven.Socket/bin/Debug/net5.0
+/Eaven.Ven.Gateway/bin/Debug/net5.0
+/Eaven.Ven.Gateway/obj
