@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Eaven.Ven.Domain\Eaven.Ven.Domain.csproj" />
     <ProjectReference Include="..\Eaven.Ven.EntityFrameworkCore.MySQL\Eaven.Ven.EntityFrameworkCore.MySQL.csproj" />
     <ProjectReference Include="..\Eaven.Ven.EntityFrameworkCore\Eaven.Ven.EntityFrameworkCore.csproj" />
   </ItemGroup>

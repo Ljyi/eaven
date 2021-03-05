@@ -15,7 +15,7 @@ using System.Threading.Tasks;
 
 namespace Eaven.Ven.EntityFrameworkCore.MySQL
 {
-    public abstract class BaseRepository<TDbContext, TEntity> : IEfRepository<TEntity> where TDbContext : DataDbContext where TEntity : EntityModel
+    public class BaseRepository<TDbContext, TEntity> : IEfRepository<TEntity> where TDbContext : DataDbContext where TEntity : EntityModel
     {
         WriteAndRead AndRead;
         public BaseRepository(WriteAndRead writeAndRead = WriteAndRead.Write)
