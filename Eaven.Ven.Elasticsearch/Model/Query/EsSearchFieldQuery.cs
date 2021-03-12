@@ -29,7 +29,7 @@ namespace Eaven.Ven.Elasticsearch.Model.Query
     /// <summary>
     /// 查询
     /// </summary>
-    public class EsSearchFieldQueryPage : Page
+    public class EsSearchFieldQueryPage : GridQuery
     {
         public EsSearchFieldQueryPage()
         {

@@ -457,9 +457,9 @@ namespace Eaven.Ven.EntityFrameworkCore
         /// <param name="entitys"></param>
         /// <param name="gp"></param>
         /// <returns></returns>
-        public List<T> GetTablePagedList<T>(IQueryable<T> entitys, Page gp)
+        public List<T> GetTablePagedList<T>(IQueryable<T> entitys, GridQuery gp)
         {
-            gp.PageInit(entitys);
+            gp.GridQueryInit(entitys);
             if (!gp.NotSort)
             {
                 try

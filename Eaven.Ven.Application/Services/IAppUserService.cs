@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Eaven.Ven.Application
 {
-    public interface IAppUserService
+    public interface IAppUserService: IApplicationService
     {
         /// <summary>
         /// 登录

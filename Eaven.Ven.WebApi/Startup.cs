@@ -1,9 +1,12 @@
 using Autofac;
+using Eaven.Ven.Application;
+using Eaven.Ven.EntityFrameworkContext;
 using Eaven.Ven.EntityFrameworkCore.MySQL;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -28,6 +31,9 @@ namespace Eaven.Ven.WebApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            #region ³õÊ¼»¯DB
+            services.AddDbContext<AppDbContext>(options => options.UseMySQL(Configuration.GetConnectionString("MySql")), ServiceLifetime.Scoped);
+            #endregion
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
@@ -61,7 +67,7 @@ namespace Eaven.Ven.WebApi
         public void ConfigureContainer(ContainerBuilder builder)
         {
             //×¢²áÒÀÀµÄ£¿é
-            builder.RegisterModule<MySqlEfCoreModule>();
+            builder.RegisterModule<ApplicationModule>();
         }
     }
 }

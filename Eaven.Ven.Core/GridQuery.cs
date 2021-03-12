@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Eaven.Ven.Core
 {
-    public class Page
+    public class GridQuery
     {
         /// <summary>
         /// 页码
@@ -45,7 +45,7 @@ namespace Eaven.Ven.Core
         /// <summary>
         ///构造方法
         /// </summary>
-        public Page()
+        public GridQuery()
         {
             this.PageSize = 5;// Defaults.PageSize;
         }
@@ -55,7 +55,7 @@ namespace Eaven.Ven.Core
         /// <param name="pageSize"></param>
         /// <param name="sortName"></param>
         /// <param name="sortOrder"></param>
-        public Page(int pageSize, string sortName, string sortOrder)
+        public GridQuery(int pageSize, string sortName, string sortOrder)
         {
             this.PageSize = pageSize;
             this.SortName = sortName;
@@ -64,7 +64,7 @@ namespace Eaven.Ven.Core
         /// <summary>
         ///初始化
         /// </summary>
-        public void PageInit<T>(IQueryable<T> entitys)
+        public void GridQueryInit<T>(IQueryable<T> entitys)
         {
             if (entitys != null)
             {
