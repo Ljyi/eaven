@@ -11,9 +11,9 @@ namespace Eaven.Ven.EntityFrameworkContext.Repository
 {
     public class AppUserRepository : BaseRepository<AppDbContext, AppUser>, IAppUserRepository
     {
-        //     WriteAndRead AndRead = WriteAndRead.Write;
-        //public AppUserRepository(WriteAndRead AndRead) : base(AndRead)
-        //{
-        //}
+        WriteAndRead AndRead = WriteAndRead.Write;
+        public AppUserRepository(WriteAndRead AndRead) : base(AndRead)
+        {
+        }
     }
 }

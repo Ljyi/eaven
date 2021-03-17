@@ -14,17 +14,28 @@ namespace Eaven.Ven.EntityFrameworkCore.MySQL
                    .As(typeof(IUnitOfWork))
                    .InstancePerLifetimeScope();
 
-            //注册ef公共Repository
+            // Register 方式指定具体类
+            //  builder.Register(c => new InjectionTestService()).As<IService>().InstancePerDependency();
+            // RegisterType 方式指定具体类
+            // builder.RegisterType<UnitOfWork<DataDbContext>>().As<IUnitOfWork>().InstancePerDependency();
+
+            ////注册ef公共Repository(构建器方法)
+            //builder.RegisterGeneric(typeof(BaseRepository<,>))
+            //    .UsingConstructor(typeof(DataDbContext))
+            //    .AsImplementedInterfaces()//为接口注入具体类
+            //    .InstancePerLifetimeScope();
+
+            //注册ef公共Repository(构建器方法)
             builder.RegisterGeneric(typeof(BaseRepository<,>))
-                .UsingConstructor(typeof(DataDbContext))
-                .AsImplementedInterfaces()
+                .As(typeof(IEfRepository<>))
+                .AsImplementedInterfaces()//为接口注入具体类
                 .InstancePerLifetimeScope();
 
-            //注册Repository服务
+            //注册Repository服务(程序集注入)
             builder.RegisterAssemblyTypes(this.ThisAssembly)
                 .Where(t => t.IsClosedTypeOf(typeof(IRepository<>)))
                 .AsImplementedInterfaces()
-                .InstancePerLifetimeScope();
+                .InstancePerLifetimeScope();//保证对象生命周期基于请求
         }
     }
 }

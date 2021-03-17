@@ -24,10 +24,6 @@ namespace Eaven.Ven.EntityFrameworkCore.Uow
         ///提交当前单元操作的结果
         /// </summary>
         /// <returns></returns>
-        /// <summary>
-        ///提交当前单元操作的结果
-        /// </summary>
-        /// <returns></returns>
         public int Commit()
         {
             if (IsCommitted)
