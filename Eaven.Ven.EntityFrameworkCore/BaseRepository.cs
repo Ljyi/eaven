@@ -1,26 +1,36 @@
-﻿using Eaven.Ven.EntityFrameworkCore.MySQL.Extensions;
+﻿using Eaven.Ven.EntityFrameworkCore.DbContextProvider;
+using Eaven.Ven.EntityFrameworkCore.Extensions;
 using Eaven.Ven.EntityFrameworkCore.Repository;
 using Eaven.Ven.EntityFrameworkCore.Uow;
-using LinqKit;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Options;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Common;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
 
-namespace Eaven.Ven.EntityFrameworkCore.MySQL
+namespace Eaven.Ven.EntityFrameworkCore
 {
-    public class BaseRepository<TDbContext, TEntity> : IEfRepository<TEntity> where TDbContext : DbContext where TEntity : EntityModel
+    public class BaseRepository<TDbContext, TEntity> : IEfRepository<TEntity> where TDbContext : DataDbContext<TDbContext> where TEntity : EntityModel
     {
-        public WriteAndRead AndRead = WriteAndRead.Write;
-        //public BaseRepository(WriteAndRead writeAndRead = WriteAndRead.Write)
+        //  private readonly IDbContextProvider<TDbContext> _dbContextProvider;
+        DataDbContext<TDbContext> DataDbContext;
+        public BaseRepository(DataDbContext<TDbContext> dbContext)
+        {
+            //   _dbContextProvider = dbContextProvider; IDbContextProvider<TDbContext> dbContextProvider,
+            DataDbContext = dbContext;
+        }
+
+        #region DbContext
+        //  protected virtual DataDbContext<TDbContext> DbContext { get; }
+
+        //public virtual Task<DbContext> GetDbContextAsync()
         //{
-        //    AndRead = writeAndRead;
+        //    return _dbContextProvider.GetDbContextAsync();
         //}
         public IUnitOfWorkContext UnitOfWork { get; set; }
         /// <summary>
@@ -32,7 +42,8 @@ namespace Eaven.Ven.EntityFrameworkCore.MySQL
             {
                 if (UnitOfWork == null)
                 {
-                    UnitOfWork = new UnitOfWorkContext<TDbContext>(AndRead);
+                    var dbContext = (DbContext)DataDbContext;
+                    UnitOfWork = new UnitOfWorkContext(dbContext);
                 }
                 if (UnitOfWork is IUnitOfWorkContext)
                 {
@@ -41,20 +52,8 @@ namespace Eaven.Ven.EntityFrameworkCore.MySQL
                 throw new Exception(string.Format("数据仓储上下文对象类型不正确，应为IRepositoryContext，实际为 {0}", UnitOfWork.GetType().Name));
             }
         }
-        ////定义数据访问上下文对象
-        //private readonly Lazy<DataDbContext> _dbMaster = new Lazy<DataDbContext>(() => DbContextFactory.CreateWriteDbContext());
-        //private readonly Lazy<DataDbContext> _dbSlave = new Lazy<DataDbContext>(() => DbContextFactory.CreateReadDbContext());
 
-        ///// <summary>
-        ///// 主库,写操作
-        ///// </summary>
-        //protected DataDbContext DbMaster => _dbMaster.Value;
-
-        ///// <summary>
-        ///// 从库,读操作
-        ///// </summary>
-        //protected DataDbContext DbSlave => _dbSlave.Value;
-
+        #endregion
 
         #region 验证是否存在
         /// <summary>
@@ -146,11 +145,11 @@ namespace Eaven.Ven.EntityFrameworkCore.MySQL
         {
             if (isNoTrack)
             {
-                return DbContext.Set<TEntity>().AsExpandable().Where(expression).AsNoTracking();
+                return DbContext.Set<TEntity>().Where(expression).AsNoTracking();
             }
             else
             {
-                var Queryable = DbContext.Set<TEntity>().AsExpandable().Where(expression);
+                var Queryable = DbContext.Set<TEntity>().Where(expression);
                 return Queryable;
             }
         }

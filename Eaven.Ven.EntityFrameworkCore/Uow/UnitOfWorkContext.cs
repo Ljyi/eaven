@@ -1,5 +1,4 @@
-﻿using Eaven.Ven.EntityFrameworkCore.MySQL;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Data.Common;
@@ -13,21 +12,11 @@ namespace Eaven.Ven.EntityFrameworkCore.Uow
     /// <summary>
     ///单元操作实现基类
     /// </summary>
-    public class UnitOfWorkContext<TDbContext> : IUnitOfWorkContext where TDbContext : DbContext
+    public class UnitOfWorkContext : IUnitOfWorkContext
     {
-        //定义数据访问上下文对象
-        //  private readonly Lazy<DataDbContext> _dbMaster = new Lazy<DataDbContext>(() => DbContextFactory.CreateWriteDbContext());
-        //  private readonly Lazy<DataDbContext> _dbSlave = new Lazy<DataDbContext>(() => DbContextFactory.CreateReadDbContext());
-        public UnitOfWorkContext(WriteAndRead writeAndRead)
+        public UnitOfWorkContext(DbContext dbContext)
         {
-            if (writeAndRead == WriteAndRead.Read)
-            {
-                LazyContext = new Lazy<DbContext>(() => DbContextFactory<TDbContext>.CreateReadDbContext());
-            }
-            else
-            {
-                LazyContext = new Lazy<DbContext>(() => DbContextFactory<TDbContext>.CreateWriteDbContext());
-            }
+                LazyContext = new Lazy<DbContext>(() => dbContext);
         }
         /// <summary>
         ///获取 当前单元操作是否已被提交

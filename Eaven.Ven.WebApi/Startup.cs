@@ -1,6 +1,7 @@
 using Autofac;
 using Eaven.Ven.Application;
 using Eaven.Ven.Domain;
+using Eaven.Ven.Domain.Repository;
 using Eaven.Ven.EntityFrameworkContext;
 using Eaven.Ven.EntityFrameworkContext.Repository;
 using Eaven.Ven.EntityFrameworkCore.ContextFactory;
@@ -36,14 +37,18 @@ namespace Eaven.Ven.WebApi
         public void ConfigureServices(IServiceCollection services)
         {
             #region 初始化DB
+            //
             services.AddDbContext<AppDbContext>(options => options.UseMySQL(Configuration.GetConnectionString("MySql")), ServiceLifetime.Scoped);
+            //单个 HTTP 请求中的多个工作单元
+          //  services.AddDbContextFactory<AppDbContext>(options => options.UseMySQL(Configuration.GetConnectionString("MySql")));
             #endregion
 
             services.AddSingleton<IApplicationService, ApplicationService>();
             services.AddSingleton<IAppUserService, AppUserService>();
             services.AddSingleton<IAppUserRepository, AppUserRepository>();
-        //    services.AddScoped<IUnitOfWorkContext, UnitOfWorkContext>();
-         //   services.AddScoped<IDbContextFactory, Eaven.Ven.EntityFrameworkCore.MySQL.DbContextFactory>();
+            services.AddSingleton<IAppUserAddressRepository, AppUserAddressRepository>();
+            //    services.AddScoped<IUnitOfWorkContext, UnitOfWorkContext>();
+            //   services.AddScoped<IDbContextFactory, Eaven.Ven.EntityFrameworkCore.MySQL.DbContextFactory>();
 
 
             services.AddControllers();

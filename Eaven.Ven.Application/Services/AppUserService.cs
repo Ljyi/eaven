@@ -1,4 +1,5 @@
 ﻿using Eaven.Ven.Domain;
+using Eaven.Ven.Domain.Repository;
 using Eaven.Ven.EntityFrameworkCore.Extensions;
 using System;
 using System.Collections.Generic;
@@ -12,9 +13,11 @@ namespace Eaven.Ven.Application
     public class AppUserService : ApplicationService, IAppUserService
     {
         private IAppUserRepository _appUserRepository;
-        public AppUserService(IAppUserRepository appUserRepository):base()
+        private IAppUserAddressRepository _appUserAddressRepository;
+        public AppUserService(IAppUserRepository appUserRepository, IAppUserAddressRepository appUserAddressRepository) : base()
         {
             this._appUserRepository = appUserRepository;
+            this._appUserAddressRepository = appUserAddressRepository;
         }
         public Task<bool> IsExistPhone(string phone)
         {
@@ -29,6 +32,9 @@ namespace Eaven.Ven.Application
                 appuerex = appuerex.And(t => t.Phone == phone);
                 appuerex = appuerex.And(t => t.Password.ToLower() == password.ToLower());
                 var appuser = await _appUserRepository.GetAsync(appuerex);
+                List<AppUserAddress> appUserAddressList = _appUserAddressRepository.GetAllList(zw => zw.AppUserId == appuser.Id);
+
+
                 return appuser;
             }
             catch (Exception ex)

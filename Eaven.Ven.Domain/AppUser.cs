@@ -1,4 +1,5 @@
 ﻿using Eaven.Ven.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -8,6 +9,7 @@ namespace Eaven.Ven.Domain
     /// <summary>
     /// AppUser【用户表】
     /// </summary>
+    [Comment("Blogs managed on the website")]
     [Table("AppUser")]
     public class AppUser: EntityModel
     {

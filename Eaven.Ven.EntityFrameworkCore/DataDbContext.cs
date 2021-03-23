@@ -1,4 +1,7 @@
-﻿using Eaven.Ven.EntityFrameworkCore.ContextFactory;
+﻿using Eaven.Ven.Core.Dependency;
+using Eaven.Ven.EntityFrameworkCore.ContextFactory;
+using Eaven.Ven.EntityFrameworkCore.DbContextProvider;
+using Eaven.Ven.EntityFrameworkCore.Repository;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -18,7 +21,7 @@ namespace Eaven.Ven.EntityFrameworkCore
 
     //    }
     //}
-    public class DataDbContext<TDbContext> : DbContext where TDbContext : DbContext
+    public class DataDbContext<TDbContext> : DbContext, IEfCoreDbContext, ITransientDependency where TDbContext : DbContext
     {
         public DataDbContext(DbContextOptions<TDbContext> options) : base(options)
         {

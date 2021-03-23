@@ -5,6 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="DbContextFactory.cs" />
+    <Compile Remove="Extensions\OrderByExtensions.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Autofac" Version="6.1.0" />
     <PackageReference Include="LinqKit.Microsoft.EntityFrameworkCore" Version="5.0.23" />
     <PackageReference Include="MySql.EntityFrameworkCore" Version="5.0.0" />

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Eaven.Ven.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -12,7 +13,7 @@ namespace Eaven.Ven.Domain
     /// AppUserAddress【用户收货地址表】
     /// </summary>
     [Table("AppUserAddress")]
-    public class AppUserAddress
+    public class AppUserAddress : EntityModel
     {
         /// <summary>
         /// 收件人

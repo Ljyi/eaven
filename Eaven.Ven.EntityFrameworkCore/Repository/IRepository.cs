@@ -1,6 +1,8 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace Eaven.Ven.EntityFrameworkCore.Repository
 {
@@ -10,5 +12,6 @@ namespace Eaven.Ven.EntityFrameworkCore.Repository
     /// <typeparam name="TEntity">Entity type</>
     public interface IRepository<TEntity> where TEntity : EntityModel
     {
+        // Task<DbContext> GetDbContextAsync();
     }
 }

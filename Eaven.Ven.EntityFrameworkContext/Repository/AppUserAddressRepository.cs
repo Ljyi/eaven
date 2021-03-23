@@ -1,7 +1,6 @@
 ﻿using Eaven.Ven.Domain;
+using Eaven.Ven.Domain.Repository;
 using Eaven.Ven.EntityFrameworkCore;
-using Eaven.Ven.EntityFrameworkCore.MySQL;
-using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,10 +9,10 @@ using System.Threading.Tasks;
 
 namespace Eaven.Ven.EntityFrameworkContext.Repository
 {
-    public class AppUserRepository : BaseRepository<AppDbContext, AppUser>, IAppUserRepository
+    public class AppUserAddressRepository : BaseRepository<AppDbContext, AppUserAddress>, IAppUserAddressRepository
     {
         AppDbContext _dbContext;
-        public AppUserRepository(AppDbContext dbContext) : base(dbContext)
+        public AppUserAddressRepository(AppDbContext dbContext) : base(dbContext)
         {
             _dbContext = dbContext;
         }
