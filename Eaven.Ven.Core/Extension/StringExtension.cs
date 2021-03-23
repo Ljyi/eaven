@@ -431,6 +431,15 @@ namespace Eaven.Ven.Core.Extension
             else
                 return null;
         }
+
+        public static bool IsNullOrWhiteSpace(this string str)
+        {
+            return string.IsNullOrWhiteSpace(str);
+        }
+        public static bool IsNullOrEmpty(this string str)
+        {
+            return string.IsNullOrEmpty(str);
+        } 
     }
 
     #region 截断字符串用的枚举

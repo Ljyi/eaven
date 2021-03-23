@@ -28,10 +28,11 @@ namespace Eaven.Ven.Application
                 .Where(t => t.IsAssignableTo<IApplicationService>())
                 .AsImplementedInterfaces()
                 .InstancePerLifetimeScope();
+
         }
         private void LoadDepends(ContainerBuilder builder)
         {
-             builder.RegisterModule<MySqlEfCoreModule>();
+            builder.RegisterModule<MySqlEfCoreModule>();
         }
     }
 }

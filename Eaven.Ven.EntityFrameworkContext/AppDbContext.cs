@@ -3,12 +3,13 @@ using Eaven.Ven.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using System;
+using System.Diagnostics.CodeAnalysis;
 
 namespace Eaven.Ven.EntityFrameworkContext
 {
-    public class AppDbContext : DataDbContext
+    public class AppDbContext : DataDbContext<AppDbContext>
     {
-        public AppDbContext(DbContextOptions<AppDbContext> options, WriteAndRead writeAndRead) : base(writeAndRead)
+        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
 
         }

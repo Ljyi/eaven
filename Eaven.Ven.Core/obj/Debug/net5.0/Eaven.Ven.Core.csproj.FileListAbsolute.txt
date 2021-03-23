@@ -9,4 +9,3 @@ E:\项目\Eaven\Eaven\Eaven.Ven.Core\obj\Debug\net5.0\Eaven.Ven.Core.csproj.Core
 E:\项目\Eaven\Eaven\Eaven.Ven.Core\obj\Debug\net5.0\Eaven.Ven.Core.dll
 E:\项目\Eaven\Eaven\Eaven.Ven.Core\obj\Debug\net5.0\ref\Eaven.Ven.Core.dll
 E:\项目\Eaven\Eaven\Eaven.Ven.Core\obj\Debug\net5.0\Eaven.Ven.Core.pdb
-E:\项目\Eaven\Eaven\Eaven.Ven.Core\obj\Debug\net5.0\Eaven.Ven.Core.csprojAssemblyReference.cache

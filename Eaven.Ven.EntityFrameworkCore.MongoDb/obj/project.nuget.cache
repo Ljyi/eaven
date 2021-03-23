@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "D7rpA+Zc0I+sKQjJJbVU26oIBSPns5MarKk3suk9qHNnTg4OcNXK9+/6+JsEnmLSzEsaSbP9j6CFqadfPn8QYg==",
+  "dgSpecHash": "cTyRKEbyzMWRsqi88Iy4w9dgflpYM/Ba2CT3WCeuqKVaFyEMLn2PXt6pi/5mio5YBFLLrprE9btqr3sU49jaXg==",
   "success": true,
   "projectFilePath": "E:\\项目\\Eaven\\Eaven\\Eaven.Ven.EntityFrameworkCore.MongoDb\\Eaven.Ven.EntityFrameworkCore.MongoDb.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ljy\\.nuget\\packages\\castle.core\\4.4.1\\castle.core.4.4.1.nupkg.sha512",
     "C:\\Users\\ljy\\.nuget\\packages\\dnsclient\\1.3.1\\dnsclient.1.3.1.nupkg.sha512",
+    "C:\\Users\\ljy\\.nuget\\packages\\jetbrains.annotations\\2020.3.0\\jetbrains.annotations.2020.3.0.nupkg.sha512",
     "C:\\Users\\ljy\\.nuget\\packages\\microsoft.entityframeworkcore\\5.0.3\\microsoft.entityframeworkcore.5.0.3.nupkg.sha512",
     "C:\\Users\\ljy\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\5.0.3\\microsoft.entityframeworkcore.abstractions.5.0.3.nupkg.sha512",
     "C:\\Users\\ljy\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\5.0.3\\microsoft.entityframeworkcore.analyzers.5.0.3.nupkg.sha512",

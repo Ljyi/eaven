@@ -13,7 +13,7 @@ namespace Eaven.Ven.Application
         /// <param name="phone"></param>
         /// <param name="password"></param>
         /// <returns></returns>
-        Task<bool> Login(string phone, string password);
+        Task<AppUser> Login(string phone, string password);
         ///// <summary>
         ///// 注册
         ///// </summary>

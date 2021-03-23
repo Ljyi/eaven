@@ -9,4 +9,8 @@ namespace Eaven.Ven.Application
     public interface IApplicationService
     {
     }
+    public class ApplicationService : IApplicationService
+    {
+
+    }
 }

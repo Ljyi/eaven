@@ -1,4 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Eaven.Ven.Application;
+using Eaven.Ven.Core;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
@@ -17,9 +20,10 @@ namespace Eaven.Ven.WebApi.Controllers
         };
 
         private readonly ILogger<WeatherForecastController> _logger;
-
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
+        IAppUserService _appUserService;
+        public WeatherForecastController(IAppUserService appUserService, ILogger<WeatherForecastController> logger)
         {
+            _appUserService = appUserService;
             _logger = logger;
         }
 
@@ -34,6 +38,31 @@ namespace Eaven.Ven.WebApi.Controllers
                 Summary = Summaries[rng.Next(Summaries.Length)]
             })
             .ToArray();
+        }
+
+        /// <summary>
+        /// 登录
+        /// </summary>
+        /// <param name="loginModel"></param>
+        /// <returns></returns>
+        [Route("login")]
+        [HttpGet]
+        [AllowAnonymous]
+        public async Task<ResultModel<string>> LoginAsync()
+        {
+            try
+            {
+                ResultModel<string> resultModel = new ResultModel<string>();
+                string phone = "18986899148";
+                string password = "E10ADC3949BA59ABBE56E057F20F883E";
+                var user = await _appUserService.Login(phone, password);
+                return resultModel;
+            }
+            catch (Exception ex)
+            {
+                string msg = ex.Message;
+                throw;
+            }
         }
     }
 }

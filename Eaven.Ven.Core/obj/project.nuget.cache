@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "n3ie6pdQgspfpik7LVdPe0Zq5HeiABV6Cspa1B2T4BEwtjiTFEDFNjjOzou/k0LPqt3ht2gxQWG3HNi9c5qOMQ==",
+  "dgSpecHash": "pPs74RZyn/kxB/6xwZjqPrBR8zClZsUv29MMn1Jq+REKjB47i1wHkvm8+jHxdagWAnGROOOoBDuzBk/ptwvphA==",
   "success": true,
   "projectFilePath": "E:\\项目\\Eaven\\Eaven\\Eaven.Ven.Core\\Eaven.Ven.Core.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\ljy\\.nuget\\packages\\jetbrains.annotations\\2020.3.0\\jetbrains.annotations.2020.3.0.nupkg.sha512",
     "C:\\Users\\ljy\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\5.0.0\\microsoft.extensions.configuration.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\ljy\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\ljy\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512"

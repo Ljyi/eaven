@@ -13,7 +13,7 @@ namespace Eaven.Ven.EntityFrameworkCore.Uow
     /// <summary>
     ///单元操作实现基类
     /// </summary>
-    public class UnitOfWorkContext : IUnitOfWorkContext
+    public class UnitOfWorkContext<TDbContext> : IUnitOfWorkContext where TDbContext : DbContext
     {
         //定义数据访问上下文对象
         //  private readonly Lazy<DataDbContext> _dbMaster = new Lazy<DataDbContext>(() => DbContextFactory.CreateWriteDbContext());
@@ -22,11 +22,11 @@ namespace Eaven.Ven.EntityFrameworkCore.Uow
         {
             if (writeAndRead == WriteAndRead.Read)
             {
-                LazyContext = new Lazy<DataDbContext>(() => DbContextFactory.CreateReadDbContext());
+                LazyContext = new Lazy<DbContext>(() => DbContextFactory<TDbContext>.CreateReadDbContext());
             }
             else
             {
-                LazyContext = new Lazy<DataDbContext>(() => DbContextFactory.CreateWriteDbContext());
+                LazyContext = new Lazy<DbContext>(() => DbContextFactory<TDbContext>.CreateWriteDbContext());
             }
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Eaven.Ven.EntityFrameworkCore.Uow
                 return LazyContext.Value;
             }
         }
-        protected Lazy<DataDbContext> LazyContext { get; set; }
+        protected Lazy<DbContext> LazyContext { get; set; }
 
         /// <summary>
         ///提交当前单元操作的结果
@@ -285,4 +285,5 @@ namespace Eaven.Ven.EntityFrameworkCore.Uow
             return q;
         }
     }
+
 }

@@ -1,7 +1,11 @@
 using Autofac;
 using Eaven.Ven.Application;
+using Eaven.Ven.Domain;
 using Eaven.Ven.EntityFrameworkContext;
+using Eaven.Ven.EntityFrameworkContext.Repository;
+using Eaven.Ven.EntityFrameworkCore.ContextFactory;
 using Eaven.Ven.EntityFrameworkCore.MySQL;
+using Eaven.Ven.EntityFrameworkCore.Uow;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -34,6 +38,13 @@ namespace Eaven.Ven.WebApi
             #region ≥ı ºªØDB
             services.AddDbContext<AppDbContext>(options => options.UseMySQL(Configuration.GetConnectionString("MySql")), ServiceLifetime.Scoped);
             #endregion
+
+            services.AddSingleton<IApplicationService, ApplicationService>();
+            services.AddSingleton<IAppUserService, AppUserService>();
+            services.AddSingleton<IAppUserRepository, AppUserRepository>();
+        //    services.AddScoped<IUnitOfWorkContext, UnitOfWorkContext>();
+         //   services.AddScoped<IDbContextFactory, Eaven.Ven.EntityFrameworkCore.MySQL.DbContextFactory>();
+
 
             services.AddControllers();
             services.AddSwaggerGen(c =>

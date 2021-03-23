@@ -15,13 +15,13 @@ using System.Threading.Tasks;
 
 namespace Eaven.Ven.EntityFrameworkCore.MySQL
 {
-    public class BaseRepository<TDbContext, TEntity> : IEfRepository<TEntity> where TDbContext : DataDbContext where TEntity : EntityModel
+    public class BaseRepository<TDbContext, TEntity> : IEfRepository<TEntity> where TDbContext : DbContext where TEntity : EntityModel
     {
-        WriteAndRead AndRead;
-        public BaseRepository(WriteAndRead writeAndRead = WriteAndRead.Write)
-        {
-            AndRead = writeAndRead;
-        }
+        public WriteAndRead AndRead = WriteAndRead.Write;
+        //public BaseRepository(WriteAndRead writeAndRead = WriteAndRead.Write)
+        //{
+        //    AndRead = writeAndRead;
+        //}
         public IUnitOfWorkContext UnitOfWork { get; set; }
         /// <summary>
         ///获取或设置的数据仓储上下文
@@ -32,7 +32,7 @@ namespace Eaven.Ven.EntityFrameworkCore.MySQL
             {
                 if (UnitOfWork == null)
                 {
-                    UnitOfWork = new UnitOfWorkContext(AndRead);
+                    UnitOfWork = new UnitOfWorkContext<TDbContext>(AndRead);
                 }
                 if (UnitOfWork is IUnitOfWorkContext)
                 {

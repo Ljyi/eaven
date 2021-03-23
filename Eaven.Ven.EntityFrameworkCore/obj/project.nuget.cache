@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "jOdeoX5D4/60qfVtH/PQxpqqGiwCVFAzMTA6Lh24CDPqt1v35PaalcrAw7vZ1NgJB015mFoaNVSIb/MEvdCzrA==",
+  "dgSpecHash": "Q0DvEQvktYSFPLlwSGucX5mcuPuLqhyNOzGr9VuYyLA8NdV14oETlfUZw663eP9A1cQwFJYcQCuLKMGYgymX5w==",
   "success": true,
   "projectFilePath": "E:\\项目\\Eaven\\Eaven\\Eaven.Ven.EntityFrameworkCore\\Eaven.Ven.EntityFrameworkCore.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ljy\\.nuget\\packages\\castle.core\\4.4.1\\castle.core.4.4.1.nupkg.sha512",
+    "C:\\Users\\ljy\\.nuget\\packages\\jetbrains.annotations\\2020.3.0\\jetbrains.annotations.2020.3.0.nupkg.sha512",
     "C:\\Users\\ljy\\.nuget\\packages\\microsoft.entityframeworkcore\\5.0.3\\microsoft.entityframeworkcore.5.0.3.nupkg.sha512",
     "C:\\Users\\ljy\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\5.0.3\\microsoft.entityframeworkcore.abstractions.5.0.3.nupkg.sha512",
     "C:\\Users\\ljy\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\5.0.3\\microsoft.entityframeworkcore.analyzers.5.0.3.nupkg.sha512",

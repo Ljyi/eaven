@@ -1,4 +1,5 @@
 ﻿using Autofac;
+using Eaven.Ven.EntityFrameworkCore.ContextFactory;
 using Eaven.Ven.EntityFrameworkCore.Repository;
 using Eaven.Ven.EntityFrameworkCore.Uow;
 using System;
@@ -8,11 +9,14 @@ namespace Eaven.Ven.EntityFrameworkCore.MySQL
     public class MySqlEfCoreModule : Module
     {
         protected override void Load(ContainerBuilder builder)
-        {
+        { 
+            // RegisterType 方式指定具体类
+            // builder.RegisterType<IDbContextFactory>().As<DbContextFactory>().InstancePerDependency();
+
             //注册UOW
-            builder.RegisterType(typeof(UnitOfWork<DataDbContext>))
-                   .As(typeof(IUnitOfWork))
-                   .InstancePerLifetimeScope();
+            //builder.RegisterType(typeof(UnitOfWork<DataDbContext>))
+            //       .As(typeof(IUnitOfWork))
+            //       .InstancePerLifetimeScope();
 
             // Register 方式指定具体类
             //  builder.Register(c => new InjectionTestService()).As<IService>().InstancePerDependency();
