@@ -1,5 +1,6 @@
 ﻿using Eaven.Ven.Application;
 using Eaven.Ven.Core;
+using Eaven.Ven.Domain;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -48,14 +49,35 @@ namespace Eaven.Ven.WebApi.Controllers
         [Route("login")]
         [HttpGet]
         [AllowAnonymous]
-        public async Task<ResultModel<string>> LoginAsync()
+        public async Task<ResultModel<AppUser>> LoginAsync()
         {
             try
             {
-                ResultModel<string> resultModel = new ResultModel<string>();
+                ResultModel<AppUser> resultModel = new ResultModel<AppUser>();
                 string phone = "18986899148";
                 string password = "E10ADC3949BA59ABBE56E057F20F883E";
-                var user = await _appUserService.Login(phone, password);
+                resultModel.data = await _appUserService.Login(phone, password);
+                return resultModel;
+            }
+            catch (Exception ex)
+            {
+                string msg = ex.Message;
+                throw;
+            }
+        }   /// <summary>
+            /// 登录
+            /// </summary>
+            /// <param name="loginModel"></param>
+            /// <returns></returns>
+        [Route("modify")]
+        [HttpPost]
+        [AllowAnonymous]
+        public async Task<ResultModel<bool>> Modify(int appUserId)
+        {
+            try
+            {
+                ResultModel<bool> resultModel = new ResultModel<bool>();
+                resultModel.data = await _appUserService.ModifyPassword(appUserId, "");
                 return resultModel;
             }
             catch (Exception ex)

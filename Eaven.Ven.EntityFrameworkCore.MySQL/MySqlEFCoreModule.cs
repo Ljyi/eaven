@@ -9,12 +9,12 @@ namespace Eaven.Ven.EntityFrameworkCore.MySQL
     public class MySqlEfCoreModule : Module
     {
         protected override void Load(ContainerBuilder builder)
-        { 
+        {
             // RegisterType 方式指定具体类
             // builder.RegisterType<IDbContextFactory>().As<DbContextFactory>().InstancePerDependency();
 
             //注册UOW
-            //builder.RegisterType(typeof(UnitOfWork<DataDbContext>))
+            //builder.RegisterType(typeof(UnitOfWork<>))
             //       .As(typeof(IUnitOfWork))
             //       .InstancePerLifetimeScope();
 
@@ -30,7 +30,7 @@ namespace Eaven.Ven.EntityFrameworkCore.MySQL
             //    .InstancePerLifetimeScope();
 
             //注册ef公共Repository(构建器方法)
-            builder.RegisterGeneric(typeof(BaseRepository<,>))
+            builder.RegisterGeneric(typeof(EFCoreRepository<,>))
                 .As(typeof(IEfRepository<>))
                 .AsImplementedInterfaces()//为接口注入具体类
                 .InstancePerLifetimeScope();

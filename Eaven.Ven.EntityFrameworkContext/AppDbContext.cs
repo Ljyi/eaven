@@ -17,6 +17,8 @@ namespace Eaven.Ven.EntityFrameworkContext
         {
             base.OnConfiguring(optionsBuilder);
             optionsBuilder.UseLazyLoadingProxies();//启用延迟加载
+            optionsBuilder.LogTo(Console.WriteLine);//日志
+            optionsBuilder.EnableDetailedErrors();//更详细的查询错误（以性能为代价）
         }
         #region App用户
         /// App用户

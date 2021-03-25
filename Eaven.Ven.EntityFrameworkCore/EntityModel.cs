@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
@@ -11,15 +12,16 @@ namespace Eaven.Ven.EntityFrameworkCore
     /// 基类
     /// </summary>
     [Serializable]
+    [Index(nameof(Id))]//索引
     public abstract class EntityModel
-    { 
+    {
         /// <summary>
-       /// 主键ID（自增）
-       /// </summary>
+        /// 主键ID（自增）
+        /// </summary>
         [Key]
         [Required]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        [Column(Order = 1)]
+     //   [Column("主键Id")]
         [Description("Id")]
         public virtual int Id { get; set; }
         /// <summary>

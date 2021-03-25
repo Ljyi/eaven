@@ -1,6 +1,7 @@
 ﻿using Eaven.Ven.Domain;
 using Eaven.Ven.Domain.Repository;
 using Eaven.Ven.EntityFrameworkCore.Extensions;
+using Eaven.Ven.EntityFrameworkCore.Uow;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,11 +14,13 @@ namespace Eaven.Ven.Application
     public class AppUserService : ApplicationService, IAppUserService
     {
         private IAppUserRepository _appUserRepository;
+        private IUnitOfWork unitOfWork;
         private IAppUserAddressRepository _appUserAddressRepository;
-        public AppUserService(IAppUserRepository appUserRepository, IAppUserAddressRepository appUserAddressRepository) : base()
+        public AppUserService(IAppUserRepository appUserRepository, IAppUserAddressRepository appUserAddressRepository, IUnitOfWork unitOfWork) : base()
         {
             this._appUserRepository = appUserRepository;
             this._appUserAddressRepository = appUserAddressRepository;
+            this.unitOfWork = unitOfWork;
         }
         public Task<bool> IsExistPhone(string phone)
         {
@@ -43,9 +46,28 @@ namespace Eaven.Ven.Application
             }
         }
 
-        public Task<bool> ModifyPassword(int appUserId, string password)
+        public async Task<bool> ModifyPassword(int appUserId, string password)
         {
-            throw new NotImplementedException();
+            try
+            {
+                unitOfWork.BeginTransaction();
+                var appuser = await _appUserRepository.FindAsync(appUserId);
+                List<AppUserAddress> appUserAddressList = _appUserAddressRepository.GetAllList(zw => zw.AppUserId == appuser.Id);
+                appuser.Gender = 1;
+                appUserAddressList.ForEach(zw => zw.ReceiverName = "声");
+                _appUserRepository.Update(appuser);
+                _appUserAddressRepository.Update(appUserAddressList);
+                unitOfWork.TransactionRollback();
+               // unitOfWork.TransactionCommit();
+                return true;
+
+            }
+            catch (Exception ex)
+            {
+
+                unitOfWork.TransactionRollback();
+                throw ex;
+            }
         }
 
         public Task<bool> ResetPassword(string phone, string password)

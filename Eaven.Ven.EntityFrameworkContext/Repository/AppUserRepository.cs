@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Eaven.Ven.EntityFrameworkContext.Repository
 {
-    public class AppUserRepository : BaseRepository<AppDbContext, AppUser>, IAppUserRepository
+    public class AppUserRepository : BaseRepository<AppUser>, IAppUserRepository
     {
         AppDbContext _dbContext;
         public AppUserRepository(AppDbContext dbContext) : base(dbContext)

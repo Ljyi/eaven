@@ -37,20 +37,45 @@ namespace Eaven.Ven.WebApi
         public void ConfigureServices(IServiceCollection services)
         {
             #region 初始化DB
+            #region MySql  
             //
             services.AddDbContext<AppDbContext>(options => options.UseMySQL(Configuration.GetConnectionString("MySql")), ServiceLifetime.Scoped);
-            //单个 HTTP 请求中的多个工作单元
-          //  services.AddDbContextFactory<AppDbContext>(options => options.UseMySQL(Configuration.GetConnectionString("MySql")));
+            //单个HTTP 请求中的多个工作单元
+            //  services.AddDbContextFactory<AppDbContext>(options => options.UseMySQL(Configuration.GetConnectionString("MySql")));
+
+            //  services.AddDbContextPool<AppDbContext>(options => options.UseMySQL(Configuration.GetConnectionString("MySql")));
+
             #endregion
 
+            #region SqlSever
+            //services.AddDbContext<AppDbContext>(options =>
+            //{
+            //    //sqlServerOptions数据库提供程序级别的可选行为选择器
+            //    //UseQueryTrackingBehavior 为通用EF Core行为选择器
+            //    options.UseSqlServer(connection, sqlServerOptions =>
+            //    {
+            //        sqlServerOptions.EnableRetryOnFailure();
+            //        sqlServerOptions.CommandTimeout(60);
+            //    })
+            //    .UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
+            //});
+            #endregion
+
+            #endregion
+
+            #region 依赖注入
             services.AddSingleton<IApplicationService, ApplicationService>();
             services.AddSingleton<IAppUserService, AppUserService>();
             services.AddSingleton<IAppUserRepository, AppUserRepository>();
             services.AddSingleton<IAppUserAddressRepository, AppUserAddressRepository>();
-            //    services.AddScoped<IUnitOfWorkContext, UnitOfWorkContext>();
+            services.AddScoped<IUnitOfWorkContext, UnitOfWorkContext>();
+            services.AddScoped<IUnitOfWork, UnitOfWork<AppDbContext>>();
             //   services.AddScoped<IDbContextFactory, Eaven.Ven.EntityFrameworkCore.MySQL.DbContextFactory>();
+            #endregion
 
+            #region 热更新
 
+            #endregion
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {

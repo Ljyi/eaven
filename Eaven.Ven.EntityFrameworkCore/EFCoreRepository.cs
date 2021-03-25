@@ -15,11 +15,11 @@ using System.Threading.Tasks;
 
 namespace Eaven.Ven.EntityFrameworkCore
 {
-    public class BaseRepository<TDbContext, TEntity> : IEfRepository<TEntity> where TDbContext : DataDbContext<TDbContext> where TEntity : EntityModel
+    public abstract class EFCoreRepository<TDbContext, TEntity> : IEfRepository<TEntity> where TDbContext : DataDbContext<TDbContext> where TEntity : EntityModel
     {
         //  private readonly IDbContextProvider<TDbContext> _dbContextProvider;
         DataDbContext<TDbContext> DataDbContext;
-        public BaseRepository(DataDbContext<TDbContext> dbContext)
+        public EFCoreRepository(DataDbContext<TDbContext> dbContext)
         {
             //   _dbContextProvider = dbContextProvider; IDbContextProvider<TDbContext> dbContextProvider,
             DataDbContext = dbContext;
